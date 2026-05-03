@@ -1,0 +1,53 @@
+.activityBar {
+  width: 48px;
+  background: var(--bg-titlebar);
+  border-right: 1px solid var(--border-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  flex-shrink: 0;
+}
+
+.top, .bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.iconBtn {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-left: 2px solid transparent;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.iconBtn:hover {
+  color: var(--text-primary);
+}
+
+.iconBtn.active {
+  color: var(--text-primary);
+  border-left-color: var(--accent-primary);
+}
+
+.geminiIcon {
+  color: #c084fc !important;
+  filter: drop-shadow(0 0 5px rgba(192, 132, 252, 0.4));
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}

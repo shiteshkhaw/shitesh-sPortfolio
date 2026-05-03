@@ -1,0 +1,66 @@
+.editor {
+  display: flex;
+  min-height: 100%;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.lineNum.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: var(--bg-editor);
+  font-size: 13px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.folderIcon {
+  opacity: 0.7;
+}
+
+.activeCrumbWrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.activeCrumb {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.lineNumbers {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
+  min-width: 50px;
+  text-align: right;
+  user-select: none;
+  border-right: 1px solid var(--border-primary);
+  flex-shrink: 0;
+}
+
+.lineNum {
+  padding: 0 12px 0 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.content {
+  flex: 1;
+  padding: 16px 24px;
+  overflow-x: auto;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}

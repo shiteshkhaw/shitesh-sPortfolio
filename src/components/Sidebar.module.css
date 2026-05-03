@@ -1,0 +1,139 @@
+.sidebar {
+  width: 240px;
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border-primary);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.section {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.copilotSection {
+  padding: 12px;
+  border-top: 1px solid var(--border-primary);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.copilotButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 16px;
+  background: rgba(192, 132, 252, 0.05);
+  border: 1px solid rgba(192, 132, 252, 0.2);
+  border-radius: 8px;
+  color: #c084fc;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: all var(--transition-fast);
+}
+
+.copilotButton:hover {
+  background: rgba(192, 132, 252, 0.1);
+  border-color: rgba(192, 132, 252, 0.4);
+}
+
+.copilotIcon {
+  flex-shrink: 0;
+}
+
+.copilotLabel {
+  flex: 1;
+  text-align: left;
+}
+
+.aiLabel {
+  font-size: 10px;
+  font-weight: 700;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+.folderToggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  text-align: left;
+}
+
+.folderName {
+  text-transform: uppercase;
+}
+
+.tree {
+  display: flex;
+  flex-direction: column;
+}
+
+.file {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 4px 12px 4px 24px;
+  background: transparent;
+  border: none;
+  border-left: 2px solid transparent;
+  color: var(--text-muted);
+  font-size: 13px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: all var(--transition-fast);
+  text-align: left;
+}
+
+.file:hover {
+  background: var(--bg-hover);
+  color: var(--text-secondary);
+}
+
+.file.active {
+  background: rgba(255, 255, 255, 0.05);
+  border-left-color: #007acc;
+  color: var(--text-primary);
+}
+
+.fileIcon {
+  font-size: 16px;
+  width: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.fileName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: absolute;
+    left: 48px;
+    top: 0;
+    bottom: 0;
+    width: calc(100vw - 48px);
+    z-index: 50;
+    box-shadow: 5px 0 25px rgba(0, 0, 0, 0.5);
+  }
+}

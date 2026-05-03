@@ -1,0 +1,45 @@
+.statusBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 28px;
+  background: #007acc;
+  padding: 0 12px;
+  flex-shrink: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.left, .rightSection {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 8px;
+  height: 28px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.item:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.copilotIcon {
+  color: #8b5cf6;
+}
+
+.themeBtn {
+  font-weight: 500;
+}
