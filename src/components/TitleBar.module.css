@@ -139,5 +139,11 @@
 
   .menus {
     gap: 8px;
+    flex-wrap: nowrap;
+  }
+
+  .menuItem {
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 }

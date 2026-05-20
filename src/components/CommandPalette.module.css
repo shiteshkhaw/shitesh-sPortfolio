@@ -144,3 +144,16 @@
   color: var(--text-muted);
   font-style: italic;
 }
+
+@media (max-width: 640px) {
+  .palette {
+    width: 95%;
+    max-height: 80vh;
+  }
+  .overlay {
+    padding-top: 40px;
+  }
+  .itemShortcut, .itemPath, .tip, .escShortcut, .footer {
+    display: none !important;
+  }
+}

@@ -36,7 +36,7 @@ export default function StatusBar({
         <div className={styles.item} title="Sync">
           <RefreshCcw size={14} />
         </div>
-        <div className={styles.item} title="Portfolio Info">
+        <div className={`${styles.item} ${styles.hideMobile}`} title="Portfolio Info">
           <span>Shitesh&apos;s Portfolio</span>
         </div>
       </div>
@@ -45,13 +45,13 @@ export default function StatusBar({
           <Sparkles size={14} className={styles.copilotIcon} />
           <span>Copilot</span>
         </div>
-        <div className={styles.item}>
+        <div className={`${styles.item} ${styles.hideMobile}`}>
           <span>TypeScript React</span>
         </div>
-        <div className={styles.item}>
+        <div className={`${styles.item} ${styles.hideMobile}`}>
           <span>UTF-8</span>
         </div>
-        <div className={styles.item} title="Prettier">
+        <div className={`${styles.item} ${styles.hideMobile}`} title="Prettier">
           <Check size={14} />
           <span>Prettier</span>
         </div>

@@ -54,6 +54,9 @@ export default function Home() {
   const openFile = useCallback((fileId) => {
     setActiveFile(fileId);
     setOpenTabs((prev) => (prev.includes(fileId) ? prev : [...prev, fileId]));
+    if (typeof window !== 'undefined' && window.innerWidth <= 768) {
+      setSidebarOpen(false);
+    }
   }, []);
 
   const toggleCopilot = useCallback(() => setCopilotOpen((p) => !p), []);

@@ -300,3 +300,21 @@
   opacity: 0.5;
   cursor: default;
 }
+
+@media (max-width: 768px) {
+  .container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: calc(100vw - 48px);
+    z-index: 60;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (max-width: 600px) {
+  .introGrid {
+    grid-template-columns: 1fr;
+  }
+}

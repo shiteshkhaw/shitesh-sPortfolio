@@ -95,3 +95,9 @@
 /* Scrollbar */
 .terminalBody::-webkit-scrollbar { width: 5px; }
 .terminalBody::-webkit-scrollbar-thumb { background: var(--border-primary); border-radius: 10px; }
+
+@media (max-width: 600px) {
+  .hideMobile {
+    display: none !important;
+  }
+}

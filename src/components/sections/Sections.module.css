@@ -496,7 +496,7 @@
 
 .heroNameLarge {
   font-family: inherit;
-  font-size: 110px;
+  font-size: clamp(40px, 10vw, 110px);
   font-weight: 900;
   line-height: 0.85;
   letter-spacing: -4px;
@@ -1363,6 +1363,10 @@
   
   .visitBtn, .automationBtn, .visitBtnDisabled {
     justify-content: center;
+  }
+
+  .phaseTabLabel {
+    display: none;
   }
 }
 

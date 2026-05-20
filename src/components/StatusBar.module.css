@@ -43,3 +43,9 @@
 .themeBtn {
   font-weight: 500;
 }
+
+@media (max-width: 768px) {
+  .hideMobile {
+    display: none !important;
+  }
+}

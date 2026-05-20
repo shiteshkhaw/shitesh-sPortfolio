@@ -75,9 +75,9 @@ export default function Terminal({ onClose, onOpenFile, files }) {
       <div className={styles.header}>
         <div className={styles.tabs}>
           <div className={`${styles.tab} ${styles.active}`}>TERMINAL</div>
-          <div className={styles.tab}>PROBLEMS</div>
-          <div className={styles.tab}>OUTPUT</div>
-          <div className={styles.tab}>DEBUG CONSOLE</div>
+          <div className={`${styles.tab} ${styles.hideMobile}`}>PROBLEMS</div>
+          <div className={`${styles.tab} ${styles.hideMobile}`}>OUTPUT</div>
+          <div className={`${styles.tab} ${styles.hideMobile}`}>DEBUG CONSOLE</div>
         </div>
         <button onClick={onClose} className={styles.closeBtn}>
           <X size={14} />
