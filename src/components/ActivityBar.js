@@ -20,14 +20,12 @@ export default function ActivityBar({
   activeSidebar = 'explorer'
 }) {
   const handleDownload = () => {
-    // Mock download action
     const link = document.createElement('a');
-    link.href = '#';
+    link.href = '/full_stack_engineer_shitesh_khaw.pdf';
     link.download = 'Shitesh_Khaw_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    alert('Downloading Shitesh_Khaw_Resume.pdf (Mock)');
   };
 
   return (

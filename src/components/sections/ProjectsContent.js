@@ -29,6 +29,26 @@ const projects = [
     mockupType: 'pipeline'
   },
   {
+    title: 'TaskGuru',
+    tagline: 'AI-Powered Productivity Operating System',
+    desc: 'A full-stack, production-grade productivity platform featuring AI task assistance, habit tracking, team collaboration, gamification, and real-time push notifications — all in a single Next.js application. Deployed on Vercel with Neon Serverless PostgreSQL, serving real users with AI coaching powered by Groq LLaMA 3.',
+    features: [
+      'AI Task Coach — Groq-powered task breakdown, priority suggestions & streak guardian',
+      'Full CRUD task management with subtasks, categories, due dates & reminders',
+      'Daily habit tracker with streak tracking, completion history & analytics',
+      'Team workspaces with RBAC (admin/member), leaderboards & activity feeds',
+      'XP points, streak badges, levels & confetti-powered gamification system',
+      'Web Push (VAPID) notifications, Razorpay payments & AWS S3 avatar uploads',
+      'Google OAuth + email/password auth with JWT sessions & bcrypt hashing',
+      'Custom SVG analytics charts — no chart library dependency'
+    ],
+    tech: ['Next.js 15', 'TypeScript', 'PostgreSQL', 'Prisma ORM', 'Groq AI', 'AWS S3', 'Razorpay', 'Web Push', 'Zod', 'JWT', 'Vercel', 'Neon'],
+    image: '/projects/taskguru.png',
+    link: 'https://task-os-nine.vercel.app',
+    github: 'https://github.com/shiteshkhaw/TaskOS/blob/main/README.md##-live-demo',
+    mockupType: 'browser'
+  },
+  {
     title: 'Wordsage',
     tagline: 'AI-powered content generation platform',
     desc: 'Built a full-stack application designed to help users generate structured content efficiently using AI.',
