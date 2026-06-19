@@ -56,8 +56,8 @@ export default function StatusBar({
           <span>Prettier</span>
         </div>
         <div className={styles.item} onClick={onThemeChange} title="Change Theme">
-          <Heart size={14} fill="#f472b6" color="#f472b6" />
-          <span>Shitesh Dark</span>
+          <Heart size={14} fill={theme === 'shitesh-dark' ? '#f472b6' : '#0284c7'} color={theme === 'shitesh-dark' ? '#f472b6' : '#0284c7'} />
+          <span>{theme === 'shitesh-dark' ? 'Shitesh Dark' : 'Shitesh Light'}</span>
         </div>
         <div className={styles.item}>
           <span>{time}</span>

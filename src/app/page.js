@@ -30,7 +30,8 @@ import styles from './page.module.css';
 const FILES = [
   { id: 'home', name: 'home.tsx', icon: FileReact, lang: 'TSX', color: '#61dafb' },
   { id: 'about', name: 'about.html', icon: FileGlobe, lang: 'HTML', color: '#e34f26' },
-  { id: 'projects', name: 'projects.js', icon: FileCode2, lang: 'JavaScript', color: '#f7df1e' },
+  { id: 'apps', name: 'apps.js', icon: FileCode2, lang: 'JavaScript', color: '#f7df1e', folder: 'projects' },
+  { id: 'workflows', name: 'workflows.js', icon: FileCode2, lang: 'JavaScript', color: '#f7df1e', folder: 'projects' },
   { id: 'skills', name: 'skills.json', icon: FileJson, lang: 'JSON', color: '#cbcb41' },
   { id: 'contact', name: 'contact.css', icon: FileCss, lang: 'CSS', color: '#38bdf8' },
   { id: 'readme', name: 'README.md', icon: FileMd, lang: 'Markdown', color: '#42a5f5' },
@@ -45,6 +46,14 @@ export default function Home() {
   const [copilotOpen, setCopilotOpen] = useState(false);
   const [theme, setTheme] = useState('shitesh-dark');
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme === 'shitesh-dark' ? 'dark' : 'light');
+  }, [theme]);
+
+  const toggleTheme = useCallback(() => {
+    setTheme((prev) => (prev === 'shitesh-dark' ? 'shitesh-light' : 'shitesh-dark'));
+  }, []);
   
   // Terminal Resizing
   const [terminalHeight, setTerminalHeight] = useState(240);
@@ -174,7 +183,7 @@ export default function Home() {
       <StatusBar
         currentFile={currentFile}
         theme={theme}
-        onThemeChange={setTheme}
+        onThemeChange={toggleTheme}
         onToggleTerminal={toggleTerminal}
         onToggleCopilot={toggleCopilot}
       />

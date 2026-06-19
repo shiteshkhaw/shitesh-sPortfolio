@@ -119,7 +119,7 @@ export default function CommandPalette({ isOpen, onClose, files, onOpenFile, onT
                   >
                     <Icon size={16} className={styles.itemIcon} style={{ color: item.color }} />
                     <span className={styles.itemName}>{item.name}</span>
-                    <span className={styles.itemPath}>{item.id === 'readme' ? './' : 'src/'}</span>
+                    <span className={styles.itemPath}>{item.id === 'readme' ? './' : item.folder ? `src/${item.folder}/` : 'src/'}</span>
                   </div>
                 );
               })}

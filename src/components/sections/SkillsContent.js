@@ -19,46 +19,10 @@ const skillCategories = [
     icon: <Database size={20} />,
     color: '#4ade80',
     skills: [
-      { name: 'REST API Design', level: 92, icon: <FileJson size={14} />, tip: 'Designed scalable REST APIs with versioning, rate-limiting & Zod validation' },
-      { name: 'Node.js Runtime', level: 90, icon: <Server size={14} />, tip: 'Built production services handling real traffic with async patterns' },
-      { name: 'Express.js Framework', level: 87, icon: <Globe2 size={14} />, tip: 'Core framework for backend services — middleware, error handling, routing' },
-      { name: 'Webhooks & Event-driven Systems', level: 88, icon: <Webhook size={14} />, tip: 'Architected event-based integrations across Meta, Stripe & custom platforms' },
-      { name: 'Prisma ORM', level: 85, icon: <Database size={14} />, tip: 'Type-safe database access with migrations, relations & connection pooling' },
-    ],
-  },
-  {
-    name: 'Frontend Engineering',
-    icon: <Layout size={20} />,
-    color: '#f472b6',
-    skills: [
-      { name: 'Next.js 15 (App Router)', level: 87, icon: <Code2 size={14} />, tip: 'Server components, SSR/SSG, middleware, API routes — used in TaskGuru' },
-      { name: 'React Component Architecture', level: 85, icon: <Component size={14} />, tip: 'Context providers, custom hooks, modular reusable component systems' },
-      { name: 'TypeScript', level: 82, icon: <Code2 size={14} />, tip: 'Type-safe full-stack development — interfaces, generics, discriminated unions' },
-      { name: 'Tailwind CSS Systems', level: 88, icon: <Paintbrush size={14} />, tip: 'Utility-first design systems — used in production apps at scale' },
-      { name: 'Performance Optimization', level: 80, icon: <Gauge size={14} />, tip: 'Lazy loading, code splitting, Core Web Vitals, dynamic imports' },
-    ],
-  },
-  {
-    name: 'Databases & Infrastructure',
-    icon: <Terminal size={20} />,
-    color: '#ffb86c',
-    skills: [
-      { name: 'PostgreSQL (Neon Serverless)', level: 84, icon: <HardDrive size={14} />, tip: 'Schema design, indexing, relations, connection pooling with Neon' },
-      { name: 'MongoDB & Schema Design', level: 80, icon: <HardDrive size={14} />, tip: 'Document modeling for scalable, flexible data layers' },
-      { name: 'AWS S3 (File Storage)', level: 78, icon: <HardDrive size={14} />, tip: 'Presigned URL uploads, bucket policies, avatar storage in TaskGuru' },
-      { name: 'Git & CI/CD', level: 86, icon: <GitBranch size={14} />, tip: 'Branching strategies, rebasing, GitHub Actions, Vercel deployments' },
-      { name: 'Deployment (Vercel)', level: 82, icon: <Rocket size={14} />, tip: 'Zero-downtime deployments with preview branches and env management' },
-    ],
-  },
-  {
-    name: 'Automation & Integration Systems',
-    icon: <Workflow size={20} />,
-    color: '#58a6ff',
-    skills: [
-      { name: 'Workflow Automation (n8n)', level: 95, icon: <Zap size={14} />, tip: 'Designed multi-phase production pipelines — from scraping to AI conversion' },
-      { name: 'API Integrations', level: 92, icon: <Plug size={14} />, tip: 'Connected 15+ third-party services: Razorpay, Resend, Groq, AWS, OAuth' },
-      { name: 'Event-based Systems', level: 88, icon: <Radio size={14} />, tip: 'Webhook-driven architectures with intelligent routing logic' },
-      { name: 'Social Platform Automation', level: 90, icon: <Share2 size={14} />, tip: 'WhatsApp, Instagram, and Meta Graph API automation at scale' },
+      { name: 'Python & FastAPI', level: 91, icon: <Code2 size={14} />, tip: 'Asynchronous API development with Pydantic validation, dependency injection, and auto-OpenAPI docs' },
+      { name: 'Node.js & Express.js', level: 90, icon: <Server size={14} />, tip: 'Production services utilizing concurrent event loops, modular routers, and custom middleware' },
+      { name: 'REST & Webhook Systems', level: 92, icon: <FileJson size={14} />, tip: 'Scale-ready API endpoints with versioning, rate limiting, and secure webhook validation' },
+      { name: 'Prisma ORM', level: 85, icon: <Database size={14} />, tip: 'Type-safe database client with schema migrations, relational mapping, and pooling' },
     ],
   },
   {
@@ -66,10 +30,44 @@ const skillCategories = [
     icon: <BrainCircuit size={20} />,
     color: '#c084fc',
     skills: [
-      { name: 'AI API Integration (Groq / OpenAI)', level: 90, icon: <Bot size={14} />, tip: 'Groq LLaMA 3, OpenRouter, OpenAI APIs — live in TaskGuru & WordSage' },
-      { name: 'Prompt Engineering', level: 87, icon: <MessageSquare size={14} />, tip: 'System prompts, chain-of-thought, few-shot patterns for production apps' },
-      { name: 'AI-powered Feature Design', level: 88, icon: <Wand2 size={14} />, tip: 'AI coach, task breaker, habit suggester, streak guardian — all in TaskGuru' },
-      { name: 'NLP & Intent Detection', level: 76, icon: <Cpu size={14} />, tip: 'Text classification, intent routing in conversational AI pipelines' },
+      { name: 'RAG Architecture', level: 92, icon: <Sparkles size={14} />, tip: 'Hybrid vector-keyword search, semantic reranking (Cross-Encoder), and context optimization' },
+      { name: 'Vector DBs (ChromaDB)', level: 88, icon: <Database size={14} />, tip: 'High-dimensional embeddings storing, indexing, and semantic similarity filtering' },
+      { name: 'Agentic Workflows & Memory', level: 90, icon: <Wand2 size={14} />, tip: 'Autonomous systems with conversation memory, intent parsing, and dynamic routing' },
+      { name: 'AI API Integrations', level: 93, icon: <Bot size={14} />, tip: 'Integration of LLMs (Groq LLaMA 3, OpenAI, OpenRouter) into production workflows' },
+      { name: 'Prompt Engineering', level: 88, icon: <MessageSquare size={14} />, tip: 'Chain-of-thought, few-shot prompts, dynamic context windowing, and output parser guards' },
+    ],
+  },
+  {
+    name: 'Databases & Infrastructure',
+    icon: <Terminal size={20} />,
+    color: '#ffb86c',
+    skills: [
+      { name: 'PostgreSQL (Neon Serverless)', level: 85, icon: <HardDrive size={14} />, tip: 'Relational database schema design, indexing, connection pooling, and Neon branching' },
+      { name: 'Docker & Containerization', level: 84, icon: <Cpu size={14} />, tip: 'Standardizing developmental environments and deploying containerized microservices' },
+      { name: 'Redis Caching & Queues', level: 82, icon: <Zap size={14} />, tip: 'Reducing latency via Redis key-value caching and job queues for asynchronous background tasks' },
+      { name: 'AWS Cloud Services (S3)', level: 80, icon: <HardDrive size={14} />, tip: 'Cloud storage management, presigned upload URLs, and asset delivery optimizations' },
+      { name: 'Git, CI/CD & Deployments', level: 87, icon: <GitBranch size={14} />, tip: 'Branching flows, automated lint-test-deploy GitHub Actions pipelines, and Vercel hosting' },
+    ],
+  },
+  {
+    name: 'Automation & Integration Systems',
+    icon: <Workflow size={20} />,
+    color: '#58a6ff',
+    skills: [
+      { name: 'Workflow Automation (n8n)', level: 95, icon: <Zap size={14} />, tip: 'Designing multi-phase production workflows — from lead scraping to AI qualification' },
+      { name: 'API Integrations & Meta Graph', level: 92, icon: <Plug size={14} />, tip: 'Connected 15+ SaaS and cloud services: Stripe, WhatsApp Cloud API, Instagram Graph API' },
+      { name: 'Webhook & Event Brokers', level: 90, icon: <Radio size={14} />, tip: 'Event-driven message routing, payload transformations, and reliable HTTP callback systems' },
+    ],
+  },
+  {
+    name: 'Frontend Engineering',
+    icon: <Layout size={20} />,
+    color: '#f472b6',
+    skills: [
+      { name: 'Next.js 15 (App Router)', level: 87, icon: <Code2 size={14} />, tip: 'Server Components, SSR/SSG pre-rendering, route handlers, and middleware authorization' },
+      { name: 'React Component Architecture', level: 85, icon: <Component size={14} />, tip: 'Custom hooks, contexts, state managers, and design system components' },
+      { name: 'TypeScript', level: 84, icon: <Code2 size={14} />, tip: 'Strong typing across client/server models, interfaces, generic types, and utility interfaces' },
+      { name: 'Tailwind CSS Systems', level: 88, icon: <Paintbrush size={14} />, tip: 'Utility-first layout design, interactive hover effects, and theme configuration' },
     ],
   },
   {
@@ -77,10 +75,9 @@ const skillCategories = [
     icon: <ShieldCheck size={20} />,
     color: '#f97316',
     skills: [
-      { name: 'JWT Authentication & OAuth', level: 88, icon: <KeyRound size={14} />, tip: 'Stateless JWT sessions + Google OAuth 2.0 — production-hardened in TaskGuru' },
-      { name: 'Role-Based Access Control', level: 83, icon: <Lock size={14} />, tip: 'Granular RBAC (admin/member) with middleware guards in production' },
-      { name: 'API Security Practices', level: 84, icon: <ShieldCheck size={14} />, tip: 'Rate limiting (5 req/min auth), CORS, HTTP-only cookies, COOP headers' },
-      { name: 'Input Validation (Zod)', level: 87, icon: <ScanSearch size={14} />, tip: 'Schema validation on all API inputs — XSS prevention, SQL injection guards' },
+      { name: 'JWT & OAuth Authentication', level: 88, icon: <KeyRound size={14} />, tip: 'Stateless JWT validation sessions, token expirations, and Google OAuth 2.0 login flows' },
+      { name: 'Role-Based Access Control', level: 85, icon: <Lock size={14} />, tip: 'Granular user authorization levels (admin/member) with route and API middleware locks' },
+      { name: 'API Security & Validation', level: 86, icon: <ShieldCheck size={14} />, tip: 'Implementing rate limiting, CORS configurations, and robust validation schemas using Zod' },
     ],
   },
 ];
@@ -130,6 +127,10 @@ export default function SkillsContent() {
 
       {/* Badges */}
       <div className={styles.skillsBadgeRow}>
+        <div className={styles.skillsBadge} style={{ '--badge-color': '#ff2b8f' }}>
+          <span className={styles.badgeEmoji}>🧠</span>
+          <span>Built: <strong>DocuMind AI</strong> (Enterprise Document Intelligence Platform)</span>
+        </div>
         <div className={styles.skillsBadge} style={{ '--badge-color': '#6366f1' }}>
           <span className={styles.badgeEmoji}>⚡</span>
           <span>Built: <strong>TaskGuru</strong> (AI Productivity OS — Next.js 15 + PostgreSQL + Groq AI)</span>

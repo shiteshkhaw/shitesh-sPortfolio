@@ -31,14 +31,7 @@ const PILLS = [
   { label: 'Backend Engineer', color: '#4ade80', icon: <Terminal size={14} /> },
   { label: 'AI / ML Dev', color: '#f472b6', icon: <Cpu size={14} /> },
   { label: 'Data Scientist', color: '#38bdf8', icon: <Database size={14} /> },
-  { label: '@ EduVanceAI', color: '#c084fc', icon: <Sparkles size={14} /> },
-];
-
-const STATS = [
-  { value: '3+', label: 'YEARS' },
-  { value: '10+', label: 'PROJECTS' },
-  { value: '∞', label: 'CURIOSITY' },
-  { value: '↑', label: 'ALWAYS LEARNING' },
+  { label: 'Learning, Always', color: '#c084fc', icon: <Sparkles size={14} /> },
 ];
 
 const SOCIALS = [
@@ -94,14 +87,54 @@ export default function HomeContent() {
           </div>
         </div>
 
-        {/* Stats Row */}
-        <div className={styles.statsRow}>
-          {STATS.map((stat, i) => (
-            <div key={i} className={styles.statCard}>
-              <div className={styles.statValue}>{stat.value}</div>
-              <div className={styles.statLabel}>{stat.label}</div>
+        {/* Philosophy, Mission & Driving Questions */}
+        <div className={styles.philosophyContainer}>
+          <div className={styles.philosophyHeader}>
+            <div className={styles.philosophyQuote}>
+              &ldquo;If software was the last revolution, <span className={styles.highlightPink}>INTELLIGENT SYSTEMS WILL BE THE NEXT</span>&rdquo;
             </div>
-          ))}
+            <div className={styles.missionRow}>
+              <span className={styles.missionTag}>MISSION</span>
+              <span className={styles.missionValue}>Engineering systems that transform information into intelligence.</span>
+            </div>
+          </div>
+
+          <div className={styles.codeBlockContainer}>
+            <div className={styles.codeHeader}>
+              <div className={styles.codeDots}>
+                <div className={styles.codeDot} style={{ background: '#ff5f56' }}></div>
+                <div className={styles.codeDot} style={{ background: '#ffbd2e' }}></div>
+                <div className={styles.codeDot} style={{ background: '#27c93f' }}></div>
+              </div>
+              <span className={styles.codeTitle}>philosophy.ts</span>
+            </div>
+            <div className={styles.codeBody}>
+              <div className={styles.codeLine}>
+                <span className={styles.syntaxComment}>// The fundamental paradigm shift</span>
+              </div>
+              <div className={styles.codeLine}>
+                <span className={styles.syntaxText}>Most software stores information.</span>
+              </div>
+              <div className={styles.codeLine}>
+                <span className={styles.syntaxText}>Most software moves information.</span>
+              </div>
+              <div className={styles.codeLine}>
+                <span className={styles.syntaxKeyword}>I am interested in something else:</span>
+              </div>
+              <div className={styles.codeLineIndent}>
+                <span className={styles.syntaxBullet}>→</span> <span className={styles.syntaxQuestion}>Can information become intelligence?</span>
+              </div>
+              <div className={styles.codeLineIndent}>
+                <span className={styles.syntaxBullet}>→</span> <span className={styles.syntaxQuestion}>Can system understand intent?</span>
+              </div>
+              <div className={styles.codeLineIndent}>
+                <span className={styles.syntaxBullet}>→</span> <span className={styles.syntaxQuestion}>Can software actively assist human thinking?</span>
+              </div>
+              <div className={styles.codeLine} style={{ marginTop: '8px' }}>
+                <span className={styles.syntaxComment}>// These questions drive everything I build.</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Socials Row */}

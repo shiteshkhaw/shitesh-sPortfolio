@@ -70,7 +70,8 @@
   align-items: center;
   gap: 6px;
   padding: 4px 10px;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-primary);
   border-radius: 20px;
   color: var(--text-secondary);
 }
@@ -137,7 +138,7 @@
 }
 
 .suggestionItem {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--bg-secondary);
   border: 1px solid var(--border-primary);
   border-radius: 12px;
   padding: 12px;
@@ -188,7 +189,8 @@
 }
 
 .assistant .messageContent {
-  background: rgba(192, 132, 252, 0.05);
+  background: rgba(192, 132, 252, 0.08);
+  border: 1px solid rgba(192, 132, 252, 0.15);
   color: var(--text-primary);
   border-bottom-left-radius: 4px;
 }
@@ -234,7 +236,7 @@
 }
 
 .quickBtn {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--bg-secondary);
   border: 1px solid var(--border-primary);
   padding: 6px 12px;
   border-radius: 8px;
@@ -250,7 +252,7 @@
 }
 
 .inputBoxWrapper {
-  background: rgba(0, 0, 0, 0.2);
+  background: var(--bg-tertiary);
   border: 1px solid var(--border-primary);
   border-radius: 12px;
   padding: 12px;
@@ -283,7 +285,7 @@
 }
 
 .sendBigBtn {
-  background: #1f6feb;
+  background: var(--accent-primary);
   color: white;
   border: none;
   border-radius: 8px;

@@ -32,7 +32,7 @@ const CONTACT_LINKS = [
     value: 'shitesh-khaw',
     url: 'https://github.com/shiteshkhaw',
     icon: <GithubIcon size={24} />,
-    color: '#fff'
+    color: 'var(--text-primary)'
   },
   {
     name: 'WhatsApp',

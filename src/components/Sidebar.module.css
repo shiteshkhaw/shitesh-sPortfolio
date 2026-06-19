@@ -106,8 +106,8 @@
 }
 
 .file.active {
-  background: rgba(255, 255, 255, 0.05);
-  border-left-color: #007acc;
+  background: var(--bg-hover);
+  border-left-color: var(--accent-primary);
   color: var(--text-primary);
 }
 

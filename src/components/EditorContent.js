@@ -11,7 +11,8 @@ import styles from './EditorContent.module.css';
 const SECTIONS = {
   home: HomeContent,
   about: AboutContent,
-  projects: ProjectsContent,
+  apps: ProjectsContent,
+  workflows: ProjectsContent,
   skills: SkillsContent,
   contact: ContactContent,
   readme: ReadmeContent,
@@ -30,7 +31,7 @@ export default function EditorContent({ activeFile, currentFile }) {
         </div>
       )}
       <div className={`${styles.content} ${activeFile === 'home' ? styles.fullWidth : ''}`}>
-        <Content />
+        <Content type={activeFile === 'apps' || activeFile === 'workflows' ? activeFile : undefined} />
       </div>
     </div>
   );

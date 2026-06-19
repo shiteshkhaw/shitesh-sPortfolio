@@ -101,3 +101,282 @@
     display: none !important;
   }
 }
+
+/* Light Theme Terminal Color Overrides */
+:root[data-theme='light'] .command {
+  color: #16a34a;
+}
+:root[data-theme='light'] .error {
+  color: #dc2626;
+}
+:root[data-theme='light'] .user {
+  color: #0d9488;
+}
+:root[data-theme='light'] .host {
+  color: #1e3a8a;
+}
+:root[data-theme='light'] .path {
+  color: #b45309;
+}
+
+/* Interactive Panels Content Styles */
+.panelContent {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.5;
+  background: var(--bg-terminal);
+}
+
+.diagnosticWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.scanHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-primary);
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.scanningPulse {
+  width: 10px;
+  height: 10px;
+  background: #38bdf8;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #38bdf8;
+  animation: pulse 1.5s infinite;
+}
+
+.scanSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 8px;
+}
+
+.scanStepPending {
+  color: var(--text-muted);
+}
+
+.scanStepDone {
+  color: #4ade80;
+  font-weight: 500;
+}
+
+.panelActionBtn {
+  background: #1f6feb;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  width: fit-content;
+  transition: background 0.2s;
+}
+
+.panelActionBtn:hover {
+  background: #388bfd;
+}
+
+.panelActionBtnSmall {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-primary);
+  color: var(--text-primary);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.panelActionBtnSmall:hover {
+  background: var(--bg-hover);
+  border-color: var(--text-muted);
+}
+
+/* Output Tab Specifics */
+.outputWorkspace {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+}
+
+.outputToolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 8px 12px;
+  border: 1px solid var(--border-primary);
+  border-radius: 6px;
+}
+
+.telemetryGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.telemetryDot {
+  width: 8px;
+  height: 8px;
+  background: #4ade80;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #4ade80;
+  animation: pulse 2.5s infinite;
+}
+
+.divider {
+  color: var(--border-primary);
+}
+
+.logFilterRow {
+  display: flex;
+  gap: 8px;
+}
+
+.filterBtn {
+  background: none;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.filterBtn:hover {
+  color: var(--text-primary);
+  background: var(--bg-hover);
+}
+
+.filterBtnActive {
+  color: var(--text-primary);
+  border-color: var(--border-active);
+  background: rgba(31, 111, 235, 0.1);
+}
+
+.scrollingOutputLogs {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border-primary);
+  border-radius: 6px;
+  padding: 12px;
+  overflow-y: auto;
+  min-height: 100px;
+}
+
+/* Debug Console REPL */
+.debugHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11.5px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.debugQuickBtns {
+  display: flex;
+  gap: 6px;
+}
+
+.debugQuickBtns button {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-primary);
+  color: var(--text-accent);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 10.5px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.debugQuickBtns button:hover {
+  background: rgba(88, 166, 255, 0.15);
+  border-color: #58a6ff;
+}
+
+.debugLogsArea {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border-primary);
+  border-radius: 6px;
+  padding: 12px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+  min-height: 80px;
+}
+
+.debugLine {
+  white-space: pre-wrap;
+}
+
+.debugLine.info {
+  color: var(--text-muted);
+}
+
+.debugLine.input {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.debugLine.error {
+  color: #f87171;
+}
+
+.debugInputLine {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--border-primary);
+  padding-top: 8px;
+}
+
+.debugInputBox {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+}
+
+/* Light Theme Overrides for Terminal */
+:root[data-theme='light'] .scrollingOutputLogs,
+:root[data-theme='light'] .debugLogsArea {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+:root[data-theme='light'] .outputToolbar {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+:root[data-theme='light'] .debugQuickBtns button {
+  background: rgba(0, 0, 0, 0.02);
+  color: var(--text-accent);
+}
+
+:root[data-theme='light'] .debugQuickBtns button:hover {
+  background: rgba(2, 132, 199, 0.1);
+  border-color: var(--border-active);
+}

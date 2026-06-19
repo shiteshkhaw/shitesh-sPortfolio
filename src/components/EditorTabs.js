@@ -3,8 +3,11 @@ import { X } from 'lucide-react';
 import styles from './EditorTabs.module.css';
 
 export default function EditorTabs({ files, openTabs, activeFile, onSelectTab, onCloseTab }) {
-  const breadcrumbs = ['shitesh-khaw', 'src'];
   const currentFile = files.find((f) => f.id === activeFile);
+  const breadcrumbs = ['shitesh-khaw', 'src'];
+  if (currentFile && currentFile.folder) {
+    breadcrumbs.push(currentFile.folder);
+  }
 
   return (
     <div className={styles.tabsArea}>
