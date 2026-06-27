@@ -48,11 +48,20 @@ export default function Home() {
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme === 'shitesh-dark' ? 'dark' : 'light');
+    let themeAttr = 'dark';
+    if (theme === 'shitesh-light') themeAttr = 'light';
+    else if (theme === 'shitesh-mono') themeAttr = 'mono';
+    else if (theme === 'shitesh-calm') themeAttr = 'calm';
+    document.documentElement.setAttribute('data-theme', themeAttr);
   }, [theme]);
 
   const toggleTheme = useCallback(() => {
-    setTheme((prev) => (prev === 'shitesh-dark' ? 'shitesh-light' : 'shitesh-dark'));
+    setTheme((prev) => {
+      if (prev === 'shitesh-dark') return 'shitesh-light';
+      if (prev === 'shitesh-light') return 'shitesh-mono';
+      if (prev === 'shitesh-mono') return 'shitesh-calm';
+      return 'shitesh-dark';
+    });
   }, []);
   
   // Terminal Resizing
@@ -106,19 +115,35 @@ export default function Home() {
     }
   }, [isResizing]);
 
+  const resizeTouch = useCallback((e) => {
+    if (isResizing && e.touches?.[0]) {
+      const clientY = e.touches[0].clientY;
+      const newHeight = window.innerHeight - clientY - 22; // Subtracting status bar height
+      if (newHeight >= 100 && newHeight <= window.innerHeight * 0.7) {
+        setTerminalHeight(newHeight);
+      }
+    }
+  }, [isResizing]);
+
   useEffect(() => {
     if (isResizing) {
       window.addEventListener('mousemove', resize);
       window.addEventListener('mouseup', stopResizing);
+      window.addEventListener('touchmove', resizeTouch, { passive: true });
+      window.addEventListener('touchend', stopResizing);
     } else {
       window.removeEventListener('mousemove', resize);
       window.removeEventListener('mouseup', stopResizing);
+      window.removeEventListener('touchmove', resizeTouch);
+      window.removeEventListener('touchend', stopResizing);
     }
     return () => {
       window.removeEventListener('mousemove', resize);
       window.removeEventListener('mouseup', stopResizing);
+      window.removeEventListener('touchmove', resizeTouch);
+      window.removeEventListener('touchend', stopResizing);
     };
-  }, [isResizing, resize, stopResizing]);
+  }, [isResizing, resize, resizeTouch, stopResizing]);
 
   const currentFile = FILES.find((f) => f.id === activeFile) || FILES[0];
 
@@ -140,12 +165,18 @@ export default function Home() {
           activeSidebar={sidebarOpen ? 'explorer' : ''}
         />
         {sidebarOpen && (
-          <Sidebar
-            files={FILES}
-            activeFile={activeFile}
-            onOpenFile={openFile}
-            onToggleCopilot={toggleCopilot}
-          />
+          <>
+            <div 
+              className={styles.sidebarOverlay} 
+              onClick={() => setSidebarOpen(false)} 
+            />
+            <Sidebar
+              files={FILES}
+              activeFile={activeFile}
+              onOpenFile={openFile}
+              onToggleCopilot={toggleCopilot}
+            />
+          </>
         )}
         <div className={styles.editorArea}>
           <EditorTabs
@@ -164,6 +195,7 @@ export default function Home() {
               <div 
                 className={styles.terminalResizer} 
                 onMouseDown={startResizing}
+                onTouchStart={startResizing}
                 ref={resizerRef}
               />
               <div style={{ height: `${terminalHeight}px`, minHeight: '100px' }}>
@@ -177,7 +209,13 @@ export default function Home() {
           )}
         </div>
         {copilotOpen && (
-          <CopilotSidebar onClose={toggleCopilot} />
+          <>
+            <div 
+              className={styles.copilotOverlay} 
+              onClick={() => setCopilotOpen(false)} 
+            />
+            <CopilotSidebar onClose={toggleCopilot} />
+          </>
         )}
       </div>
       <StatusBar

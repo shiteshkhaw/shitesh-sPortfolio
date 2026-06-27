@@ -380,3 +380,18 @@
   background: rgba(2, 132, 199, 0.1);
   border-color: var(--border-active);
 }
+
+/* --- Grayscale Terminal Overrides --- */
+:root[data-theme='mono'] .command { color: #ffffff; }
+:root[data-theme='mono'] .error { color: #a3a3a3; }
+:root[data-theme='mono'] .user { color: #ffffff; }
+:root[data-theme='mono'] .host { color: #a3a3a3; }
+:root[data-theme='mono'] .path { color: #666666; }
+
+/* --- Calming Sage Terminal Overrides --- */
+:root[data-theme='calm'] .command { color: #5eead4; }
+:root[data-theme='calm'] .error { color: #f87171; }
+:root[data-theme='calm'] .user { color: #a78bfa; }
+:root[data-theme='calm'] .host { color: #5eead4; }
+:root[data-theme='calm'] .path { color: #a3b8b1; }
+

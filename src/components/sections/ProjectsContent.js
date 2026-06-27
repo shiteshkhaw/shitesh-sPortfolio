@@ -35,7 +35,7 @@ const projects = [
     link: 'https://docu-mind-ai-web.vercel.app/',
     github: 'https://github.com/shiteshkhaw/DocuMind-AI',
     mockupType: 'browser',
-    isFeatured: true
+    isFeatured: false
   },
   {
     title: 'TaskGuru',

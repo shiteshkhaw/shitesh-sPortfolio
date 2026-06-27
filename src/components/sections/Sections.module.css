@@ -1636,8 +1636,24 @@
     justify-content: center;
   }
 
-  .phaseTabLabel {
-    display: none;
+  .mainBtn, .ghostBtn {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .projectTabRow {
+    gap: 4px;
+  }
+
+  .projectTabBtn {
+    flex: 1;
+    text-align: center;
+    padding: 8px 4px;
+    font-size: 11.5px;
   }
 }
 
@@ -2566,11 +2582,21 @@
   color: #0284c7 !important;
 }
 
+.nodeWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .nodeConnector {
   color: var(--text-muted);
   font-size: 14px;
   display: flex;
   align-items: center;
+}
+
+.nodeConnector::before {
+  content: '→';
 }
 
 .specOutput {
@@ -2679,6 +2705,30 @@
 @media (max-width: 768px) {
   .mitigationGrid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nodeDiagram {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .nodeWrapper {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .nodeConnector::before {
+    content: '↓';
+  }
+
+  .phaseTabLabel {
+    display: none;
+  }
+
+  .phaseArrow {
+    opacity: 0.8;
   }
 }
 
@@ -2985,4 +3035,132 @@
   margin: 0;
   flex: 1;
 }
+
+/* ==========================================================================
+   THEME STYLING OVERRIDES (GRAYSCALE & CALMING SAGE)
+   ========================================================================== */
+
+/* --- Grayscale Theme (Mono) --- */
+:root[data-theme='mono'] .lastName {
+  color: #ffffff;
+}
+
+:root[data-theme='mono'] .highlightPink {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+:root[data-theme='mono'] .highlightsTitle {
+  color: #ffffff;
+}
+
+:root[data-theme='mono'] .adrTabBtnActive {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+:root[data-theme='mono'] .metricVal {
+  color: #ffffff;
+}
+
+:root[data-theme='mono'] .commitMessage strong {
+  color: #ffffff;
+}
+
+:root[data-theme='mono'] .gitCommitCard::before {
+  border-color: #ffffff;
+}
+
+:root[data-theme='mono'] .profileCard,
+:root[data-theme='mono'] .skillCategoryCard,
+:root[data-theme='mono'] .connectCardPrimary,
+:root[data-theme='mono'] .suggestionCard,
+:root[data-theme='mono'] .socialCardPremium,
+:root[data-theme='mono'] .readmeSectionPremium,
+:root[data-theme='mono'] .techCategoryBox,
+:root[data-theme='mono'] .gitCommitCard,
+:root[data-theme='mono'] .statCard,
+:root[data-theme='mono'] .philosophyHeader {
+  background: #0c0c0c;
+  border-color: #222222;
+}
+
+:root[data-theme='mono'] .diagramNode {
+  background: #111111;
+  border-color: #222222;
+}
+
+:root[data-theme='mono'] .diagramNodeActive {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+:root[data-theme='mono'] .issueState {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* --- Calming Sage Theme (Calm) --- */
+:root[data-theme='calm'] .lastName {
+  color: #a78bfa; /* UI/UX Creative Lavender */
+}
+
+:root[data-theme='calm'] .highlightPink {
+  color: #a78bfa;
+}
+
+:root[data-theme='calm'] .highlightsTitle {
+  color: #a78bfa;
+}
+
+:root[data-theme='calm'] .adrTabBtnActive {
+  color: #a78bfa !important;
+  background: rgba(167, 139, 250, 0.1) !important;
+  border-color: rgba(167, 139, 250, 0.2) !important;
+}
+
+:root[data-theme='calm'] .metricVal {
+  color: #a78bfa;
+}
+
+:root[data-theme='calm'] .commitMessage strong {
+  color: #a78bfa;
+}
+
+:root[data-theme='calm'] .gitCommitCard::before {
+  border-color: #a78bfa;
+}
+
+:root[data-theme='calm'] .profileCard,
+:root[data-theme='calm'] .skillCategoryCard,
+:root[data-theme='calm'] .connectCardPrimary,
+:root[data-theme='calm'] .suggestionCard,
+:root[data-theme='calm'] .socialCardPremium,
+:root[data-theme='calm'] .readmeSectionPremium,
+:root[data-theme='calm'] .techCategoryBox,
+:root[data-theme='calm'] .gitCommitCard,
+:root[data-theme='calm'] .statCard,
+:root[data-theme='calm'] .philosophyHeader {
+  background: #151d1a;
+  border-color: rgba(94, 234, 212, 0.12);
+}
+
+:root[data-theme='calm'] .diagramNode {
+  background: #1c2623;
+  border-color: rgba(94, 234, 212, 0.12);
+}
+
+:root[data-theme='calm'] .diagramNodeActive {
+  background: rgba(94, 234, 212, 0.15) !important;
+  border-color: #5eead4 !important;
+  color: #5eead4 !important;
+}
+
+:root[data-theme='calm'] .issueState {
+  background: rgba(167, 139, 250, 0.15);
+  color: #d6bdfd;
+}
+
 

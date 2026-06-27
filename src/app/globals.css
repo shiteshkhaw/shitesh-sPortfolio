@@ -14,6 +14,9 @@
   --bg-hover: rgba(255, 255, 255, 0.05);
   --bg-terminal: #0d1117;
 
+  --text-statusbar: rgba(255, 255, 255, 0.85);
+  --bg-statusbar-hover: rgba(255, 255, 255, 0.12);
+
   --text-primary: rgba(255, 255, 255, 0.85);
   --text-secondary: rgba(255, 255, 255, 0.6);
   --text-muted: rgba(255, 255, 255, 0.4);
@@ -66,6 +69,71 @@
 
   --shadow-glow: 0 0 20px rgba(2, 132, 199, 0.1);
   --shadow-lg: 0 10px 40px rgba(15, 23, 42, 0.08);
+
+  --text-statusbar: rgba(255, 255, 255, 0.9);
+  --bg-statusbar-hover: rgba(255, 255, 255, 0.15);
+}
+
+:root[data-theme='mono'] {
+  /* Grayscale Theme */
+  --bg-primary: #000000;
+  --bg-secondary: #0c0c0c;
+  --bg-tertiary: #1a1a1a;
+  --bg-editor: #000000;
+  --bg-sidebar: #050505;
+  --bg-titlebar: #0c0c0c;
+  --bg-statusbar: #ffffff;
+  --bg-tab-active: #000000;
+  --bg-tab-inactive: #050505;
+  --bg-hover: rgba(255, 255, 255, 0.08);
+  --bg-terminal: #000000;
+
+  --text-primary: #ffffff;
+  --text-secondary: #a3a3a3;
+  --text-muted: #666666;
+  --text-accent: #ffffff;
+
+  --border-primary: #222222;
+  --border-active: #ffffff;
+  --border-subtle: #111111;
+  --accent-primary: #ffffff;
+
+  --text-statusbar: #000000;
+  --bg-statusbar-hover: rgba(0, 0, 0, 0.08);
+
+  --shadow-glow: 0 0 20px rgba(255, 255, 255, 0.05);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.8);
+}
+
+:root[data-theme='calm'] {
+  /* Calming Sage UI/UX Theme */
+  --bg-primary: #0f1513;
+  --bg-secondary: #17201d;
+  --bg-tertiary: #1f2a27;
+  --bg-editor: #0f1513;
+  --bg-sidebar: #0a0e0d;
+  --bg-titlebar: #17201d;
+  --bg-statusbar: #319782;
+  --bg-tab-active: #0f1513;
+  --bg-tab-inactive: #0a0e0d;
+  --bg-hover: rgba(94, 234, 212, 0.06);
+  --bg-terminal: #0f1513;
+
+  --text-primary: #e6edea;
+  --text-secondary: #a3b8b1;
+  --text-muted: #6b7e78;
+  --text-accent: #5eead4;
+
+  --border-primary: rgba(94, 234, 212, 0.12);
+  --border-active: #319782;
+  --border-subtle: rgba(94, 234, 212, 0.05);
+  --accent-primary: #319782;
+
+  --text-statusbar: rgba(255, 255, 255, 0.9);
+  --bg-statusbar-hover: rgba(255, 255, 255, 0.15);
+
+  --shadow-glow: 0 0 20px rgba(49, 151, 130, 0.15);
+  --shadow-lg: 0 10px 40px rgba(10, 14, 13, 0.5);
 }
 
 * {

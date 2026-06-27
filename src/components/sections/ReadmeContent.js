@@ -654,7 +654,7 @@ export default function ReadmeContent() {
 
           <div className={styles.nodeDiagram}>
             {activeProjectData.nodes.map((node, i) => (
-              <span key={node.id} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <span key={node.id} className={styles.nodeWrapper}>
                 <button 
                   className={`${styles.diagramNode} ${selectedNode === node.id ? styles.diagramNodeActive : ''}`}
                   onClick={() => setSelectedNode(node.id)}
@@ -666,7 +666,7 @@ export default function ReadmeContent() {
                   </div>
                 </button>
                 {i < activeProjectData.nodes.length - 1 && (
-                  <span className={styles.nodeConnector}>→</span>
+                  <span className={styles.nodeConnector}></span>
                 )}
               </span>
             ))}

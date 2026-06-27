@@ -7,6 +7,22 @@ import {
 import { useState, useEffect } from 'react';
 import styles from './StatusBar.module.css';
 
+const getThemeColor = (t) => {
+  if (t === 'shitesh-dark') return '#f472b6';
+  if (t === 'shitesh-light') return '#0284c7';
+  if (t === 'shitesh-mono') return '#000000';
+  if (t === 'shitesh-calm') return '#5eead4';
+  return '#f472b6';
+};
+
+const getThemeName = (t) => {
+  if (t === 'shitesh-dark') return 'Shitesh Dark';
+  if (t === 'shitesh-light') return 'Shitesh Light';
+  if (t === 'shitesh-mono') return 'Grayscale';
+  if (t === 'shitesh-calm') return 'Calming Sage';
+  return 'Shitesh Dark';
+};
+
 export default function StatusBar({
   currentFile,
   theme,
@@ -56,8 +72,8 @@ export default function StatusBar({
           <span>Prettier</span>
         </div>
         <div className={styles.item} onClick={onThemeChange} title="Change Theme">
-          <Heart size={14} fill={theme === 'shitesh-dark' ? '#f472b6' : '#0284c7'} color={theme === 'shitesh-dark' ? '#f472b6' : '#0284c7'} />
-          <span>{theme === 'shitesh-dark' ? 'Shitesh Dark' : 'Shitesh Light'}</span>
+          <Heart size={14} fill={getThemeColor(theme)} color={getThemeColor(theme)} />
+          <span>{getThemeName(theme)}</span>
         </div>
         <div className={styles.item}>
           <span>{time}</span>
